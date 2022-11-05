@@ -12,7 +12,7 @@ becomes easier.
 
 ## Usage 
 1) Install the extension
-2) Visit https://jobs.ams.at/public/emps/ and search for any open position.
+2) Visit [ams.at](https://jobs.ams.at/public/emps/) and search for any open position.
 
 ## Build it yourself
 1) Goto [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
@@ -22,6 +22,6 @@ becomes easier.
 We are happy for any contributions.
 
 First read our Code of Conducts and then there are some instructions in our
-[Contributing](blob/main/CONTRIBUTING.md) guidelines.
+[Contributing](CONTRIBUTING.md) guidelines.
 
 Thank you, you are awesome :tada: :blush:
