@@ -7,6 +7,12 @@
         "48": "icons/amsify-48.png",
         "96": "icons/amsify-96.png"
     },
+    "browser_action": {
+      "default_icon": {
+        "16": "icons/amsify-16.png",
+        "32": "icons/amsify-32.png"
+      }
+    },
     "content_scripts": [
         {
             "matches": [
