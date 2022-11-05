@@ -27,7 +27,7 @@ function replacePrices() {
             counter++;
         }
     }
-    var page_links = document.getElementsByClassName("page-link");
+    let page_links = document.getElementsByClassName("page-link");
     for (let page_link of page_links) {
         page_link.onclick = delayedFunction;
     }
