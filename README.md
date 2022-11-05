@@ -14,10 +14,14 @@ becomes easier.
 1) Install the extension
 2) Visit https://jobs.ams.at/public/emps/ and search for any open position.
 
-<!-- FIXME: Add ## Build it yourself -->
+## Build it yourself
+1) Goto [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
+2) Click on "Load Temporary Add-on..." and select the `manifest.json` in the firefox folder.
 
 ## Contributing
 We are happy for any contributions.
 
 First read our Code of Conducts and then there are some instructions in our
-Contributing guidelines.
+[Contributing](blob/main/CONTRIBUTING.md) guidelines.
+
+Thank you, you are awesome :tada: :blush:
