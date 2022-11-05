@@ -27,7 +27,14 @@ function replacePrices() {
             counter++;
         }
     }
+    var page_links = document.getElementsByClassName("page-link");
+    for (let page_link of page_links) {
+        page_link.onclick = delayedFunction;
+    }
 }
-document.addEventListener("load", setTimeout(function () { replacePrices(); }, 250));
+function delayedFunction() {
+    setTimeout(function () { replacePrices(); }, 250)
+}
+document.addEventListener("load", delayedFunction());
 
 
