@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "AMSify",
+    "version": "1.0",
+    "description": "Adds a price to all ams job offers.",
+    "icons": {
+        "48": "icons/amsify-48.png",
+        "96": "icons/amsify-96.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.ams.at/*"
+            ],
+            "js": [
+                "price_extraction.js"
+            ]
+        }
+    ]
+}
