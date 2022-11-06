@@ -3,7 +3,7 @@ function textToGermanNumber(text){
 }
 
 function replacePrices() {
-    const average_wage = 2640;
+    const average_wage = 2104;
     let monthly_wage = null;
 
     const regex = /(€|EUR)?\ ?[0-9]{1,4}([\,\.]?[0-9]{3}?)*([\,\.][0-9]{2})?\ ?(€|EUR)/g;
@@ -35,15 +35,17 @@ function replacePrices() {
                     else {
                         loadedText = matches[0]
                     }
-                    loadedText = loadedText[0].slice(0, - 3);
+                    loadedText = loadedText[0];
                     
-                    if (loadedText.length < 3) {
+                    if (loadedText.length < 6) {
                         monthly_wage = textToGermanNumber(loadedText) * 40;
                         loadedText += " €/h";
-                    } else if(loadedText.length > 5){
+                    } else if(loadedText.length > 8){
+                        loadedText = loadedText.slice(0, - 3);
                         loadedText += " € p. a.";
-                        monthly_wage = textToGermanNumber(loadedText) / 12;
+                        monthly_wage = textToGermanNumber(loadedText) / 14;
                     } else {
+                        loadedText = loadedText.slice(0, - 3);
                         loadedText += " € p. m.";
                         monthly_wage = textToGermanNumber(loadedText);
                     }
