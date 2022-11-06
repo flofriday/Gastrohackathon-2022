@@ -21,7 +21,6 @@ becomes easier.
 ## Contributing
 We are happy for any contributions.
 
-First read our Code of Conducts and then there are some instructions in our
-[Contributing](CONTRIBUTING.md) guidelines.
+Please read our [Contributing](CONTRIBUTING.md) guidelines.
 
 Thank you, you are awesome :tada: :blush:
