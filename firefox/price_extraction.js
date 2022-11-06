@@ -14,20 +14,26 @@ function replacePrices() {
             if (req.status == 200) {
                 let loadedText = req.responseText;
 
-                if ((new RegExp(regex)).test(loadedText)) {                    
+                if ((new RegExp(regex)).test(loadedText)) {
                     let matches = loadedText.match(regex);
                     matches = matches.map(x => x.match(regex2))
-                    if(matches.length > 1){
+                    if (matches.length > 1) {
                         loadedText = matches.reduce(
                             function (a, b) {
                                 return a.length > b.length ? a : b;
                             }
                         );
                     }
-                    else{
-                        loadedText = matches[0] 
+                    else {
+                        loadedText = matches[0]
                     }
-                    
+                    //loadedText = loadedText[0].slice(0, - 3);
+                    let temp_text = loadedText[0].slice(0, - 3);
+                    if (temp_text.length < 3) {
+                        loadedText += "/h";
+                    } else {
+                        loadedText = temp_text;
+                    }
                 } else {
                     loadedText = "?";
                 }
@@ -48,7 +54,6 @@ function replacePrices() {
             counter++;
         }
     }
-    console.log("TEST" + counter);
     let page_links = document.getElementsByClassName("page-link");
     for (let page_link of page_links) {
         page_link.onclick = delayedFunction;

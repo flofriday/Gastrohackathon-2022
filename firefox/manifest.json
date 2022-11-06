@@ -2,18 +2,18 @@
     "manifest_version": 2,
     "name": "AMSify",
     "version": "1.0",
-    "description": "Adds a wages to all ams job offers.",
+    "description": "Adds wages to all ams job offers.",
     "icons": {
         "48": "icons/amsify-48.png",
         "96": "icons/amsify-96.png"
     },
     "browser_action": {
-      "browser_style": true,
-      "default_popup": "popup/popup.html",
-      "default_icon": {
-        "16": "icons/amsify-16.png",
-        "32": "icons/amsify-32.png"
-      }
+        "browser_style": true,
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/amsify-16.png",
+            "32": "icons/amsify-32.png"
+        }
     },
     "content_scripts": [
         {
