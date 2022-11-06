@@ -1,7 +1,7 @@
 # AMSify
 A Firefox plugin to put the wage of each posting to its list entry.
 
-<!-- FIXME: Add screenshots comparing with and without the plugin -->
+![Screenshot](screenshot.png)
 
 The [AMS](https://www.ams.at/) keeps the largest list of open positions in 
 Austria. However, you have to click on each one in the list to see the wage.
