@@ -91,7 +91,7 @@ function delayedFunction() {
 
 }
 function delayedFunctionSearch() {
-    setTimeout(function () { delayedFunction(); }, 1000);
+    setTimeout(delayedFunction, 2000);
 
 }
 document.addEventListener("load", delayedFunction());
