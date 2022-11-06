@@ -35,15 +35,18 @@ function replacePrices() {
                     else {
                         loadedText = matches[0]
                     }
-                    //loadedText = loadedText[0].slice(0, - 3);
                     let temp_text = loadedText[0].slice(0, - 3);
                     
                     if (temp_text.length < 3) {
-                        monthly_wage = textToGermanNumber(loadedText) * 40;
-                        loadedText += "/h";
+                        monthly_wage = textToGermanNumber(temp_text) * 40;
+                        loadedText += " €/h";
                     } else {
-                        loadedText = temp_text;
-                        monthly_wage = textToGermanNumber(loadedText);
+                        if (temp_text.length > 5) {
+                            loadedText += " € p. a.";
+                        } else {
+                            loadedText += " € p. m.";
+                        }
+                        monthly_wage = textToGermanNumber(temp_text);
                         console.log("Gehalt=" + loadedText + " Parsed=" + monthly_wage)
                     }
                 } else {
