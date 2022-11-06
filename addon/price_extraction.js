@@ -90,6 +90,10 @@ function delayedFunction() {
     }
 
 }
+function delayedFunctionSearch() {
+    setTimeout(function () { delayedFunction(); }, 1000);
+
+}
 document.addEventListener("load", delayedFunction());
-
-
+var search_button = document.getElementById("ams-search-btn")
+search_button.onclick = delayedFunctionSearch;
