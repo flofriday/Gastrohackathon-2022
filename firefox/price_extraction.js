@@ -1,6 +1,6 @@
 function replacePrices() {
-    const regex = "(€|EUR)?\ ?[0-9]{1,4}([\,\.]?[0-9]{3}?)*([\,\.][0-9]{2})?\ ?(€|EUR)";
-    const regex2 = "[0-9]{1,3}([\,\.]?[0-9]{3}?)";
+    const regex = /(€|EUR)?\ ?[0-9]{1,4}([\,\.]?[0-9]{3}?)*([\,\.][0-9]{2})?\ ?(€|EUR)/g;
+    const regex2 = /([0-9]+\.)*[0-9]+(\,[0-9]{1,2})?/g;
     const correct_url_regex = new RegExp("https://jobs.ams.at");
     const boxes = document.querySelectorAll('#ams-search-result-list > sn-list-item-container');
     let counter = 0;
@@ -9,14 +9,25 @@ function replacePrices() {
         if (correct_url_regex.test(link)) {
             let req = new XMLHttpRequest();
             link = link.replace('/jobs/', '/api/joboffer/');
-            console.log(link);
             req.open('GET', link, false);
             req.send(null);
             if (req.status == 200) {
                 let loadedText = req.responseText;
-                if ((new RegExp(regex)).test(loadedText) && (new RegExp(regex2)).test(loadedText.match(regex)[0])) {
-                    loadedText = loadedText.match(regex)[0];
-                    loadedText = loadedText.match(regex2)[0];
+
+                if ((new RegExp(regex)).test(loadedText)) {                    
+                    let matches = loadedText.match(regex);
+                    matches = matches.map(x => x.match(regex2))
+                    if(matches.length > 1){
+                        loadedText = matches.reduce(
+                            function (a, b) {
+                                return a.length > b.length ? a : b;
+                            }
+                        );
+                    }
+                    else{
+                        loadedText = matches[0] 
+                    }
+                    
                 } else {
                     loadedText = "?";
                 }
