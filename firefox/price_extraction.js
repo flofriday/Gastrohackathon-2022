@@ -52,7 +52,6 @@ function replacePrices() {
                 } else {
                     loadedText = "?";
                 }
-                loadedText += " €";
 
                 if (monthly_wage != null) {
                     if (monthly_wage < average_wage){ 
