@@ -47,7 +47,6 @@ function replacePrices() {
                             loadedText += " € p. m.";
                         }
                         monthly_wage = textToGermanNumber(temp_text);
-                        console.log("Gehalt=" + loadedText + " Parsed=" + monthly_wage)
                     }
                 } else {
                     loadedText = "?";
