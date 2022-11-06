@@ -1,5 +1,5 @@
 # AMSify
-A Firefox plugin to put the wage of each posting to its list entry.
+A Firefox and Chrome plugin to put the wage of each posting to its list entry.
 
 ![Screenshot](screenshot.png)
 
@@ -11,12 +11,17 @@ becomes easier.
 <!-- FIXME: Add a try it now button/link -->
 
 ## Usage 
-1) Install the extension
+1) Install the extension in firefox or chrome
 2) Visit [ams.at](https://jobs.ams.at/public/emps/) and search for any open position.
 
 ## Build it yourself
+### Firefox
 1) Goto [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
-2) Click on "Load Temporary Add-on..." and select the `manifest.json` in the firefox folder.
+2) Click on "Load Temporary Add-on..." and select the `manifest.json` in the addon folder.
+
+### Chrome
+1) Goto [chrome://extensions/](chrome://extensions/) and enable developer mode
+2) Click on "Load Unpacked" and select `addon` folder.
 
 ## Contributing
 We are happy for any contributions.
