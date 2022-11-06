@@ -38,7 +38,7 @@ function replacePrices() {
                     loadedText = loadedText[0];
                     
                     if (loadedText.length < 6) {
-                        monthly_wage = textToGermanNumber(loadedText) * 40;
+                        monthly_wage = textToGermanNumber(loadedText) * 40 * 4;
                         loadedText += " €/h";
                     } else if(loadedText.length > 8){
                         loadedText = loadedText.slice(0, - 3);
