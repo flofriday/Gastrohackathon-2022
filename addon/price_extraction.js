@@ -86,7 +86,7 @@ function replacePrices() {
 function delayedFunction() {
     if ((document.documentElement.textContent || document.documentElement.innerText
     ).indexOf('Gehalt') == -1) {
-        setTimeout(function () { replacePrices(); }, 500);
+        setTimeout(replacePrices, 500);
     }
 
 }
@@ -94,6 +94,6 @@ function delayedFunctionSearch() {
     setTimeout(delayedFunction, 2000);
 
 }
-document.addEventListener("load", delayedFunction());
+delayedFunction();
 var search_button = document.getElementById("ams-search-btn")
 search_button.onclick = delayedFunctionSearch;
